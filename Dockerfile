@@ -7,6 +7,7 @@ WORKDIR /usr/src/app
 COPY require_library.txt ./
 RUN pip install --no-cache-dir -r require_library.txt
 
-COPY . .
+COPY ./src/ .
 
-CMD [ "python", "./your-daemon-or-script.py" ]
+EXPOSE 8080
+CMD [ "bash" ]
